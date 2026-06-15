@@ -1,10 +1,10 @@
-# PixelGuard Foundation
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelGuard Foundation | Gaming Safety Education for Kids & Families</title>
-  <meta name="description" content="PixelGuard Foundation is a Spokane-based nonprofit educating children, parents, and gaming communities about predator safety in gaming environments." />
+  <title>PixelGuard Foundation | Coming Soon</title>
+  <meta name="description" content="PixelGuard Foundation is a gaming safety nonprofit coming soon. We educate children, parents, and gaming communities about predator safety in gaming environments." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -13,135 +13,34 @@
 
     :root {
       --navy: #0D1B2A;
-      --navy-mid: #152336;
       --teal: #00C9B1;
       --teal-light: #00E5CC;
-      --teal-glow: rgba(0,201,177,0.12);
       --white: #F7F9FC;
       --slate: #4A5568;
-      --slate-light: #718096;
-      --mint-bg: #E8F8F6;
-      --pill-bg: rgba(0,201,177,0.15);
     }
 
-    html { scroll-behavior: smooth; }
+    html, body {
+      height: 100%;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--white);
-      color: var(--navy);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(13,27,42,0.95);
-      backdrop-filter: blur(12px);
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(0,201,177,0.15);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-shield {
-      display: grid;
-      grid-template-columns: repeat(4, 6px);
-      grid-template-rows: repeat(5, 6px);
-      gap: 1.5px;
-    }
-
-    .nav-shield span {
-      border-radius: 1px;
-      background: var(--teal);
-    }
-
-    /* Shield pixel pattern — shield silhouette */
-    .nav-shield span:nth-child(1),
-    .nav-shield span:nth-child(2),
-    .nav-shield span:nth-child(3),
-    .nav-shield span:nth-child(4),
-    .nav-shield span:nth-child(5),
-    .nav-shield span:nth-child(8),
-    .nav-shield span:nth-child(9),
-    .nav-shield span:nth-child(12),
-    .nav-shield span:nth-child(13),
-    .nav-shield span:nth-child(16),
-    .nav-shield span:nth-child(18),
-    .nav-shield span:nth-child(19) { background: var(--teal); }
-
-    .nav-shield span:nth-child(6),
-    .nav-shield span:nth-child(7),
-    .nav-shield span:nth-child(10),
-    .nav-shield span:nth-child(11),
-    .nav-shield span:nth-child(14),
-    .nav-shield span:nth-child(15),
-    .nav-shield span:nth-child(17),
-    .nav-shield span:nth-child(20) { background: transparent; }
-
-    .nav-wordmark {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--white);
-      letter-spacing: -0.02em;
-    }
-
-    .nav-wordmark span { color: var(--teal); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: rgba(247,249,252,0.7);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--teal); }
-
-    .nav-cta {
-      background: var(--teal) !important;
-      color: var(--navy) !important;
-      padding: 0.5rem 1.25rem !important;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      transition: background 0.2s !important;
-    }
-
-    .nav-cta:hover { background: var(--teal-light) !important; }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
       background: var(--navy);
+      color: var(--white);
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
-      padding-top: 64px;
+      justify-content: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
       position: relative;
       overflow: hidden;
     }
 
-    .hero-grid-bg {
+    /* Grid background */
+    body::before {
+      content: '';
       position: absolute;
       inset: 0;
       background-image:
@@ -151,726 +50,244 @@
       pointer-events: none;
     }
 
-    .hero-glow {
+    /* Glow */
+    body::after {
+      content: '';
       position: absolute;
-      top: 10%;
-      right: -5%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(0,201,177,0.12) 0%, transparent 65%);
+      top: -10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0,201,177,0.1) 0%, transparent 65%);
       pointer-events: none;
     }
 
-    .hero-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
+    .container {
       position: relative;
       z-index: 1;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
     }
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--pill-bg);
-      border: 1px solid rgba(0,201,177,0.3);
-      border-radius: 100px;
-      padding: 0.3rem 0.875rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--teal);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
+    /* Pixel shield */
+    .shield-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(9, 1fr);
+      gap: 4px;
+      width: 100px;
+      height: 110px;
+      margin: 0 auto 1.75rem;
     }
 
-    .hero-eyebrow::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--teal);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
+    .px { border-radius: 2px; }
+    .px.on { background: var(--teal); }
+    .px.hi { background: #00ffe8; }
+    .px.off { background: rgba(255,255,255,0.05); }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .hero-headline {
+    .wordmark {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+      font-size: 1rem;
       font-weight: 700;
       color: var(--white);
-      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 3rem;
+    }
+
+    .wordmark span { color: var(--teal); }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
       letter-spacing: -0.03em;
+      line-height: 1.1;
       margin-bottom: 1.25rem;
     }
 
-    .hero-headline em {
+    h1 em {
       font-style: normal;
       color: var(--teal);
     }
 
-    .hero-sub {
-      color: rgba(247,249,252,0.65);
-      font-size: 1.0625rem;
+    .mission {
+      color: rgba(247,249,252,0.6);
+      font-size: 1rem;
       line-height: 1.7;
-      margin-bottom: 2rem;
-      max-width: 480px;
+      margin-bottom: 2.5rem;
     }
 
-    .hero-actions {
+    /* Email form */
+    .signup-form {
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--teal);
-      color: var(--navy);
-      padding: 0.8125rem 1.75rem;
-      border-radius: 8px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 0.9375rem;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-block;
-    }
-
-    .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
-
-    .btn-ghost {
-      border: 1px solid rgba(247,249,252,0.25);
-      color: rgba(247,249,252,0.85);
-      padding: 0.8125rem 1.75rem;
-      border-radius: 8px;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 0.9375rem;
-      text-decoration: none;
-      transition: border-color 0.2s, color 0.2s;
-      display: inline-block;
-    }
-
-    .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
-
-    /* Pixel Shield — signature element */
-    .pixel-shield {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .shield-grid {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 4px;
-      width: clamp(220px, 28vw, 340px);
-      aspect-ratio: 1 / 1.1;
-      position: relative;
-    }
-
-    .shield-grid .px {
-      border-radius: 3px;
-      transition: background 0.4s ease;
-    }
-
-    /* Teal shield silhouette pixels */
-    .px.on { background: var(--teal); }
-    /* Inner highlight pixels */
-    .px.hi { background: #00ffe8; }
-    /* Dark background pixels */
-    .px.off { background: rgba(255,255,255,0.04); }
-    /* Accent pixels */
-    .px.ac { background: rgba(0,201,177,0.3); }
-
-    .shield-label {
-      margin-top: 1.25rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--white);
-      letter-spacing: -0.02em;
-    }
-
-    .shield-label span { color: var(--teal); }
-
-    .shield-tagline {
-      font-size: 0.8rem;
-      color: rgba(247,249,252,0.4);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-top: 0.4rem;
-    }
-
-    /* ── STATS ── */
-    #stats {
-      background: var(--navy-mid);
-      padding: 3rem clamp(1.5rem, 5vw, 4rem);
-      border-top: 1px solid rgba(0,201,177,0.1);
-      border-bottom: 1px solid rgba(0,201,177,0.1);
-    }
-
-    .stats-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: var(--teal);
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-
-    .stat-label {
-      color: rgba(247,249,252,0.55);
-      font-size: 0.875rem;
-      margin-top: 0.4rem;
-      line-height: 1.45;
-    }
-
-    /* ── MISSION PILLARS ── */
-    #mission {
-      padding: 6rem clamp(1.5rem, 5vw, 4rem);
-      background: var(--white);
-    }
-
-    .section-eyebrow {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: 0.75rem;
-    }
-
-    .section-heading {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-      font-weight: 700;
-      color: var(--navy);
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      gap: 0.625rem;
       margin-bottom: 1rem;
-    }
-
-    .section-sub {
-      color: var(--slate);
-      font-size: 1rem;
-      max-width: 520px;
-      line-height: 1.7;
-      margin-bottom: 3.5rem;
-    }
-
-    .pillars {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    .pillar-card {
-      background: var(--mint-bg);
-      border: 1px solid rgba(0,201,177,0.15);
-      border-radius: 12px;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(0,201,177,0.1);
-    }
-
-    .pillar-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: var(--teal);
-    }
-
-    .pillar-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--navy);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 1.25rem;
-      font-size: 1.4rem;
     }
 
-    .pillar-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.1875rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 0.625rem;
-      letter-spacing: -0.01em;
-    }
-
-    .pillar-desc {
-      color: var(--slate);
-      font-size: 0.9375rem;
-      line-height: 1.65;
-    }
-
-    /* ── ABOUT / FOUNDER ── */
-    #about {
-      padding: 6rem clamp(1.5rem, 5vw, 4rem);
-      background: var(--navy);
-      position: relative;
-      overflow: hidden;
-    }
-
-    #about::before {
-      content: '';
-      position: absolute;
-      bottom: -20%;
-      left: -10%;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(0,201,177,0.08) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .about-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    #about .section-heading { color: var(--white); }
-    #about .section-sub { color: rgba(247,249,252,0.6); }
-    #about .section-eyebrow { margin-bottom: 0.75rem; }
-
-    .founder-quote {
-      border-left: 3px solid var(--teal);
-      padding-left: 1.25rem;
-      margin: 2rem 0;
-    }
-
-    .founder-quote p {
-      color: rgba(247,249,252,0.8);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      font-style: italic;
-    }
-
-    .founder-byline {
-      margin-top: 0.75rem;
-      color: var(--teal);
-      font-size: 0.875rem;
-      font-weight: 600;
-    }
-
-    .about-callouts {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .callout-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(0,201,177,0.15);
-      border-radius: 10px;
-      padding: 1.25rem;
-    }
-
-    .callout-box strong {
-      display: block;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.5rem;
-      color: var(--teal);
-      font-weight: 700;
-      line-height: 1;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.3rem;
-    }
-
-    .callout-box span {
-      font-size: 0.8125rem;
-      color: rgba(247,249,252,0.5);
-    }
-
-    /* ── CONTACT / AUDIENCES ── */
-    #contact {
-      padding: 6rem clamp(1.5rem, 5vw, 4rem);
-      background: var(--white);
-    }
-
-    .contact-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .contact-header { margin-bottom: 3rem; }
-
-    .audience-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      margin-bottom: 3rem;
-    }
-
-    .audience-card {
-      border: 1px solid rgba(13,27,42,0.12);
-      border-radius: 12px;
-      padding: 1.75rem;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      text-decoration: none;
-      display: block;
-      color: inherit;
-    }
-
-    .audience-card:hover {
-      border-color: var(--teal);
-      box-shadow: 0 8px 32px rgba(0,201,177,0.1);
-    }
-
-    .audience-icon {
-      font-size: 1.75rem;
-      margin-bottom: 0.875rem;
-    }
-
-    .audience-title {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.01em;
-    }
-
-    .audience-desc {
-      font-size: 0.875rem;
-      color: var(--slate);
-      line-height: 1.6;
-    }
-
-    .audience-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin-top: 0.875rem;
-      font-size: 0.8125rem;
-      font-weight: 600;
-      color: var(--teal);
-    }
-
-    .contact-direct {
-      background: var(--navy);
-      border-radius: 12px;
-      padding: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-direct-text h3 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
+    .signup-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.8125rem 1.1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(0,201,177,0.3);
+      background: rgba(255,255,255,0.05);
       color: var(--white);
-      letter-spacing: -0.02em;
-      margin-bottom: 0.375rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      outline: none;
+      transition: border-color 0.2s;
     }
 
-    .contact-direct-text p {
-      color: rgba(247,249,252,0.55);
-      font-size: 0.9rem;
-    }
+    .signup-form input::placeholder { color: rgba(247,249,252,0.35); }
+    .signup-form input:focus { border-color: var(--teal); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy);
-      border-top: 1px solid rgba(0,201,177,0.1);
-      padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
-    }
-
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
+    .signup-form button {
+      padding: 0.8125rem 1.5rem;
+      background: var(--teal);
+      color: var(--navy);
+      border: none;
+      border-radius: 8px;
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      color: var(--white);
       font-size: 0.9375rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
     }
 
-    .footer-brand span { color: var(--teal); }
+    .signup-form button:hover {
+      background: var(--teal-light);
+      transform: translateY(-1px);
+    }
 
-    .footer-meta {
+    .form-note {
       font-size: 0.8rem;
-      color: rgba(247,249,252,0.35);
+      color: rgba(247,249,252,0.3);
+      margin-bottom: 2.5rem;
     }
 
-    .footer-meta a {
-      color: rgba(247,249,252,0.4);
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(0,201,177,0.3);
+      margin: 0 auto 2.5rem;
+    }
+
+    .contact-line {
+      font-size: 0.875rem;
+      color: rgba(247,249,252,0.45);
+    }
+
+    .contact-line a {
+      color: var(--teal);
       text-decoration: none;
+      font-weight: 600;
     }
 
-    .footer-meta a:hover { color: var(--teal); }
+    .contact-line a:hover { color: var(--teal-light); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .hero-inner, .about-inner { grid-template-columns: 1fr; }
-      .pixel-shield { display: none; }
-      .stats-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-      .pillars { grid-template-columns: 1fr; }
-      .audience-grid { grid-template-columns: 1fr; }
-      .about-callouts { grid-template-columns: 1fr 1fr; }
-      nav .nav-links { display: none; }
+    .footer-note {
+      margin-top: 3rem;
+      font-size: 0.75rem;
+      color: rgba(247,249,252,0.2);
+    }
+
+    /* Success state */
+    .success-msg {
+      display: none;
+      color: var(--teal);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 2.5rem;
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .hero-eyebrow::before { animation: none; }
-      * { transition: none !important; }
+      * { transition: none !important; animation: none !important; }
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="nav-logo">
-    <div class="nav-shield" aria-hidden="true">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-    </div>
-    <span class="nav-wordmark"><span>Pixel</span>Guard Foundation</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#mission">Mission</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Get Involved</a></li>
-    <li><a href="mailto:hello@pixelguard.org" class="nav-cta">Contact Us</a></li>
-  </ul>
-</nav>
+    <!-- Logo -->
+    <div class="shield-grid" id="shieldGrid" aria-hidden="true"></div>
+    <div class="wordmark"><span>Pixel</span>Guard Foundation</div>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-grid-bg" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Spokane, WA · Gaming Safety Nonprofit</div>
-      <h1 class="hero-headline">
-        Predators live where <em>your kids game.</em>
-      </h1>
-      <p class="hero-sub">
-        PixelGuard Foundation equips children, parents, and gaming communities with the knowledge to recognize and resist predators in gaming environments — before grooming begins.
-      </p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get Involved</a>
-        <a href="#mission" class="btn-ghost">Our Mission</a>
-      </div>
-    </div>
-    <div class="pixel-shield" aria-hidden="true">
-      <!-- 8×9 pixel grid forming a shield silhouette -->
-      <div class="shield-grid" id="shieldGrid"></div>
-      <div class="shield-label"><span>Pixel</span>Guard</div>
-      <div class="shield-tagline">Foundation</div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section id="stats" aria-label="Key statistics">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">1 in 5</div>
-      <div class="stat-label">children are solicited by predators while playing online games each year</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">90%</div>
-      <div class="stat-label">of child sexual exploitation begins through gaming platforms and in-game chat</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">~40%</div>
-      <div class="stat-label">of grooming victims already knew their perpetrator as a trusted gaming friend</div>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION PILLARS -->
-<section id="mission">
-  <div style="max-width:1100px;margin:0 auto;">
-    <div class="section-eyebrow">What We Do</div>
-    <h2 class="section-heading">Three pillars. One mission.</h2>
-    <p class="section-sub">
-      "Don't talk to strangers" was never designed for gaming. Predators build trust over weeks and months inside the games your child loves — we teach families exactly how that happens and how to stop it.
+    <!-- Headline -->
+    <h1>Something <em>important</em><br>is loading.</h1>
+    <p class="mission">
+      We're building a gaming safety nonprofit dedicated to protecting children from predators in gaming environments. Our educational programming, resources, and community tools are on their way.
     </p>
-    <div class="pillars">
-      <div class="pillar-card">
-        <div class="pillar-icon">📚</div>
-        <div class="pillar-title">Education</div>
-        <p class="pillar-desc">Age-appropriate curricula for kids 5–12 that teach how predators use gaming platforms, in-game chat, and voice channels to groom children — and exactly what to do when it happens.</p>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-icon">📢</div>
-        <div class="pillar-title">Advocacy</div>
-        <p class="pillar-desc">Pushing game developers, platforms, and policymakers to build stronger protections into the games and lobbies where children spend their time.</p>
-      </div>
-      <div class="pillar-card">
-        <div class="pillar-icon">🎮</div>
-        <div class="pillar-title">Community</div>
-        <p class="pillar-desc">Partnering with gamers, streamers, clan leaders, and community managers to shift gaming culture from the inside — making it harder for predators to operate undetected.</p>
-      </div>
+
+    <!-- Email signup -->
+    <div class="signup-form">
+      <input type="email" id="emailInput" placeholder="your@email.com" aria-label="Email address" />
+      <button onclick="handleSignup()">Notify Me</button>
     </div>
+    <p class="form-note">We'll let you know when we launch. No spam, ever.</p>
+    <p class="success-msg" id="successMsg">✓ You're on the list — we'll be in touch!</p>
+
+    <div class="divider"></div>
+
+    <!-- Contact -->
+    <p class="contact-line">
+      Questions or partnerships: <a href="mailto:hello@pixelguard.org">hello@pixelguard.org</a>
+    </p>
+
+    <p class="footer-note">Washington State Nonprofit · EIN 42-2442335 · Spokane, WA</p>
+
   </div>
-</section>
 
-<!-- ABOUT / FOUNDER -->
-<section id="about">
-  <div class="about-inner">
-    <div>
-      <div class="section-eyebrow">About the Foundation</div>
-      <h2 class="section-heading">Built by someone who knows the game.</h2>
-      <p class="section-sub">PixelGuard Foundation was incorporated in Washington State to address a critical gap in child safety education — one that overlooks gaming environments, the exact spaces where predators actively target and groom children.</p>
-      <div class="founder-quote">
-        <p>"The danger isn't strangers. It's the 'friend' your child has been gaming with for six months who has been grooming them the entire time — and nobody taught them to recognize it."</p>
-        <div class="founder-byline">— Felisha Elmer (Tiger), Founder</div>
-      </div>
-    </div>
-    <div class="about-callouts">
-      <div class="callout-box">
-        <strong>WA</strong>
-        <span>State incorporated nonprofit</span>
-      </div>
-      <div class="callout-box">
-        <strong>EIN</strong>
-        <span>Federal tax ID registered</span>
-      </div>
-      <div class="callout-box">
-        <strong>K-12</strong>
-        <span>Educational programming focus</span>
-      </div>
-      <div class="callout-box">
-        <strong>Free</strong>
-        <span>Resources for families & educators</span>
-      </div>
-    </div>
-  </div>
-</section>
+  <script>
+    // Build pixel shield
+    const pattern = [
+      0,1,1,1,1,1,1,0,
+      1,1,1,1,1,1,1,1,
+      1,1,1,1,1,1,1,1,
+      1,1,2,2,2,2,1,1,
+      0,1,1,2,2,1,1,0,
+      0,1,1,1,1,1,1,0,
+      0,0,1,1,1,1,0,0,
+      0,0,0,1,1,0,0,0,
+      0,0,0,0,0,0,0,0,
+    ];
+    const grid = document.getElementById('shieldGrid');
+    pattern.forEach(v => {
+      const px = document.createElement('div');
+      px.className = 'px ' + ['off','on','hi'][v];
+      grid.appendChild(px);
+    });
 
-<!-- CONTACT BY AUDIENCE -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="contact-header">
-      <div class="section-eyebrow">Get Involved</div>
-      <h2 class="section-heading">How can we help you?</h2>
-      <p class="section-sub">Whether you're a parent worried about who your child is gaming with, an educator building curriculum, or a donor ready to make an impact — we'd love to hear from you.</p>
-    </div>
-    <div class="audience-grid">
-      <a href="mailto:hello@pixelguard.org?subject=Parent%20Inquiry" class="audience-card">
-        <div class="audience-icon">👨‍👩‍👧</div>
-        <div class="audience-title">Parents & Guardians</div>
-        <p class="audience-desc">Learn the warning signs of gaming-based grooming, get resources, or request a workshop for your school or community.</p>
-        <div class="audience-link">Contact us →</div>
-      </a>
-      <a href="mailto:hello@pixelguard.org?subject=Educator%20Inquiry" class="audience-card">
-        <div class="audience-icon">🏫</div>
-        <div class="audience-title">Educators & Schools</div>
-        <p class="audience-desc">Access gaming safety curriculum materials and bring PixelGuard programming into your classroom.</p>
-        <div class="audience-link">Request resources →</div>
-      </a>
-      <a href="mailto:hello@pixelguard.org?subject=Donor%20or%20Grant%20Inquiry" class="audience-card">
-        <div class="audience-icon">🤝</div>
-        <div class="audience-title">Donors & Funders</div>
-        <p class="audience-desc">Support the only Spokane-based nonprofit focused specifically on predator safety in gaming environments.</p>
-        <div class="audience-link">Partner with us →</div>
-      </a>
-    </div>
-    <div class="contact-direct">
-      <div class="contact-direct-text">
-        <h3>Reach us directly</h3>
-        <p>We respond to every message. hello@pixelguard.org</p>
-      </div>
-      <a href="mailto:hello@pixelguard.org" class="btn-primary">Send an Email</a>
-    </div>
-  </div>
-</section>
+    // Flicker
+    const onPx = grid.querySelectorAll('.px.on, .px.hi');
+    setInterval(() => {
+      const px = onPx[Math.floor(Math.random() * onPx.length)];
+      px.style.opacity = (0.4 + Math.random() * 0.6).toFixed(2);
+      setTimeout(() => px.style.opacity = '1', 300);
+    }, 900);
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand"><span>Pixel</span>Guard Foundation</div>
-    <div class="footer-meta">
-      Washington State Nonprofit · EIN 42-2442335 · Spokane, WA ·
-      <a href="mailto:hello@pixelguard.org">hello@pixelguard.org</a>
-    </div>
-  </div>
-</footer>
+    // Email signup (mailto fallback — no backend needed)
+    function handleSignup() {
+      const email = document.getElementById('emailInput').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('emailInput').focus();
+        return;
+      }
+      // Open mailto so signup lands in your inbox
+      window.location.href = `mailto:hello@pixelguard.org?subject=Launch%20Notification%20Signup&body=Please%20add%20me%20to%20the%20launch%20list%3A%20${encodeURIComponent(email)}`;
+      document.getElementById('emailInput').value = '';
+      document.querySelector('.signup-form').style.display = 'none';
+      document.querySelector('.form-note').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    }
 
-<script>
-  // Build pixel shield grid (8 columns × 9 rows = 72 cells)
-  // 1 = teal on, 2 = bright highlight, 0 = dark off, 3 = accent dim
-  const pattern = [
-    0,1,1,1,1,1,1,0,
-    1,1,1,1,1,1,1,1,
-    1,1,1,1,1,1,1,1,
-    1,1,2,2,2,2,1,1,
-    0,1,1,2,2,1,1,0,
-    0,1,1,1,1,1,1,0,
-    0,0,1,1,1,1,0,0,
-    0,0,0,1,1,0,0,0,
-    0,0,0,0,0,0,0,0,
-  ];
-
-  const grid = document.getElementById('shieldGrid');
-  grid.style.gridTemplateRows = `repeat(9, 1fr)`;
-
-  pattern.forEach((v, i) => {
-    const px = document.createElement('div');
-    px.className = 'px ' + ['off','on','hi','ac'][v];
-    grid.appendChild(px);
-  });
-
-  // Subtle flicker animation on random teal pixels
-  const onPixels = grid.querySelectorAll('.px.on, .px.hi');
-  setInterval(() => {
-    const px = onPixels[Math.floor(Math.random() * onPixels.length)];
-    px.style.opacity = (0.5 + Math.random() * 0.5).toFixed(2);
-    setTimeout(() => { px.style.opacity = '1'; }, 300);
-  }, 800);
-</script>
-
+    document.getElementById('emailInput').addEventListener('keydown', e => {
+      if (e.key === 'Enter') handleSignup();
+    });
+  </script>
 </body>
 </html>
